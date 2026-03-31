@@ -33,7 +33,7 @@ class _ChatScreenState extends State<ChatScreen> {
           children: [
             CircleAvatar(
               backgroundColor: Colors.white,
-              child: Text(widget.sellerName[0], style: const TextStyle(color: AppTheme.saffron)),
+              child: Text(widget.sellerName[0], style: const TextStyle(color: AppTheme.turquoise)),
             ),
             const SizedBox(width: 12),
             Text(widget.sellerName),
@@ -54,7 +54,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     margin: const EdgeInsets.only(bottom: 8),
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                     decoration: BoxDecoration(
-                      color: msg.isMe ? AppTheme.saffron : Colors.grey[300],
+                      color: msg.isMe ? AppTheme.turquoise : Colors.grey[300],
                       borderRadius: BorderRadius.only(
                         topLeft: const Radius.circular(16),
                         topRight: const Radius.circular(16),
@@ -93,7 +93,7 @@ class _ChatScreenState extends State<ChatScreen> {
             decoration: BoxDecoration(
               color: Colors.white,
               boxShadow: [
-                BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10),
+                const BoxShadow(color: Color(0x0D000000), blurRadius: 10),
               ],
             ),
             child: SafeArea(
@@ -116,7 +116,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     ),
                   ),
                   IconButton(
-                    icon: const Icon(Icons.send, color: AppTheme.saffron),
+                    icon: const Icon(Icons.send, color: AppTheme.turquoise),
                     onPressed: _sendMessage,
                   ),
                 ],

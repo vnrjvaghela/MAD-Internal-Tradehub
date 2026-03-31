@@ -51,7 +51,7 @@ class ProductDetailsScreen extends StatelessWidget {
                       Text(
                         '₹${product.price.toStringAsFixed(0)}',
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                              color: AppTheme.green,
+                              color: AppTheme.teal,
                               fontWeight: FontWeight.bold,
                             ),
                       ),
@@ -63,7 +63,7 @@ class ProductDetailsScreen extends StatelessWidget {
                   Row(
                     children: [
                       CircleAvatar(
-                        backgroundColor: AppTheme.saffron,
+                        backgroundColor: AppTheme.turquoise,
                         child: Text(product.sellerName[0], style: const TextStyle(color: Colors.white)),
                       ),
                       const SizedBox(width: 12),
@@ -131,10 +131,10 @@ class ProductDetailsScreen extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+            const BoxShadow(
+              color: Color(0x1A000000),
               blurRadius: 10,
-              offset: const Offset(0, -5),
+              offset: Offset(0, -5),
             ),
           ],
         ),

@@ -33,8 +33,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
   void _handlePaymentSuccess(PaymentSuccessResponse response) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('Payment Successful! Order placed. (ID: ${response.paymentId})'),
-        backgroundColor: AppTheme.green,
+                                        content: Text('Payment Successful! Order placed. (ID: ${response.paymentId})'),
+        backgroundColor: AppTheme.teal,
       ),
     );
     Navigator.popUntil(context, (route) => route.isFirst);
@@ -109,9 +109,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
             ListTile(
               leading: const Icon(Icons.payment, color: AppTheme.navyBlue),
               title: const Text('Razorpay (UPI, Netbanking, Cards)'),
-              trailing: const Icon(Icons.check_circle, color: AppTheme.green),
+              trailing: const Icon(Icons.check_circle, color: AppTheme.teal),
               shape: RoundedRectangleBorder(
-                side: const BorderSide(color: AppTheme.green, width: 2),
+                side: const BorderSide(color: AppTheme.teal, width: 2),
                 borderRadius: BorderRadius.circular(8),
               ),
             ),
@@ -122,7 +122,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 padding: EdgeInsets.all(16.0),
                 child: Row(
                   children: [
-                    Icon(Icons.verified_user, color: AppTheme.green),
+                    Icon(Icons.verified_user, color: AppTheme.teal),
                     SizedBox(width: 12),
                     Expanded(
                       child: Text('TradeHub Escrow Protection: Funds are safely processed via Razorpay.'),
